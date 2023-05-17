@@ -1,12 +1,12 @@
 function mostrarSeccion(seccion) {
-  // Ocultar todas las secciones
+
   var secciones = document.getElementsByTagName("section");
   for (var i = 0; i < secciones.length; i++) {
     secciones[i].style.display = "none";
   }
-  // Mostrar la sección seleccionada
+ 
   document.getElementById(seccion).style.display = "block";
-  // Marcar el enlace correspondiente como activo
+ 
   var enlaces = document.getElementsByTagName("a");
   for (var i = 0; i < enlaces.length; i++) {
     enlaces[i].classList.remove("active");
@@ -14,7 +14,6 @@ function mostrarSeccion(seccion) {
   document.getElementById(seccion + "-enlace").classList.add("active");
 }
 
-// Mostrar la primera sección al cargar la página
 mostrarSeccion('seccion1');
 
 
@@ -53,9 +52,6 @@ queryForm.addEventListener('submit', (event) => {
   const email = formData.get('email');
   const message = formData.get('message');
 
-  // Aquí es donde enviaríamos la consulta a un servidor y esperaríamos una respuesta
-
-  // En este ejemplo, simplemente mostramos la información ingresada por el usuario
   queryResponse.innerHTML = `
     <p>Gracias por contactarnos, ${name}. Hemos recibido tu consulta:</p>
     <ul>
